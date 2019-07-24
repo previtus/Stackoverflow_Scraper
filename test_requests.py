@@ -1,5 +1,6 @@
 import requests
 import json
+from tools import html2text
 
 page = "info" # basic statistics
 page = "questions" # questions
@@ -41,3 +42,10 @@ answer_bodies = [a["body"] for a in parsed["items"][0]["answers"]]
 print(answer_bodies)
 
 # Remove html!
+
+question_body = html2text(question_body)
+print(question_body)
+
+for answer_body in answer_bodies:
+    answer_body = html2text(answer_body)
+    print(answer_body)
