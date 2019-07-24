@@ -1,0 +1,17 @@
+How to use StackExchange APIs?
+
+Requests are limited to thirty per five seconds.
+
+
+# site = select directly one of the sub-communities
+https://api.stackexchange.com/2.2/questions/?&site=gamedev&filter=withbody
+
+# key = allows for more queries
+https://api.stackexchange.com/2.2/info?site=stackoverflow&key=app key
+
+?pagesize=5 # last 5 questions
+
+# For scraping ... ?
+# get all question ids with answers and then:
+# by question id
+# https://api.stackexchange.com/2.2/questions/### questionId ###
